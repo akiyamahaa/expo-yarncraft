@@ -15,9 +15,13 @@ export type RootStackParamList = {
   Formula: undefined
   Tool: undefined
   ToolDetail: undefined
-  FormulaDetail: undefined
+  FormulaDetail: {
+    id: number
+  }
   Trick: undefined
-  TrickDetail: undefined
+  TrickDetail: {
+    id: number
+  }
   Sample: undefined
 }
 
@@ -143,7 +147,6 @@ export default function RootStack() {
           headerBackTitleVisible: false,
         }}
         name="Sample"
-        
         component={Sample}
       />
     </Stack.Navigator>

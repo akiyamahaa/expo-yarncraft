@@ -1,9 +1,34 @@
-import profile from '@/assets/images/profile.png'
-import thumbnail from '@/assets/images/thumbnail.png'
-import cards from '@/assets/images/cards.png'
-import path from '@/assets/images/path.png'
-import logo from '@/assets/images/logo.png'
-import logoSmall from '@/assets/images/logo-small.png'
-import empty from '@/assets/images/empty.png'
+import vit0 from '@/assets/craft/vit0.png'
+import vit1 from '@/assets/craft/vit1.png'
+import vit2 from '@/assets/craft/vit2.png'
+import vit3 from '@/assets/craft/vit3.png'
+import bang from '@/assets/craft/bang.jpg'
+import dap from '@/assets/craft/dap.jpeg'
+import hat from '@/assets/craft/hat.jpeg'
+import keo from '@/assets/craft/keo.jpg'
+import biquyet from '@/assets/craft/biquyet.jpg'
+import goroi from '@/assets/craft/goroi.jpg'
+import kimdan from '@/assets/craft/kimdan.jpg'
+import meodanmoc from '@/assets/craft/meodanmoc.jpg'
 
-export default { profile, thumbnail, cards, path, logo, logoSmall, empty }
+import kimnhon from '@/assets/craft/kimnhon.jpg'
+import mockhoa from '@/assets/craft/mockhoa.jpeg'
+import thuocdo from '@/assets/craft/thuocdo.jpeg'
+
+export default {
+  vit0,
+  vit1,
+  vit2,
+  vit3,
+  bang,
+  kimdan,
+  kimnhon,
+  keo,
+  hat,
+  dap,
+  mockhoa,
+  thuocdo,
+  goroi,
+  meodanmoc,
+  biquyet,
+}
