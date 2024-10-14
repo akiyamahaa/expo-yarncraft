@@ -24,7 +24,7 @@ const Home = ({ navigation }: Props) => {
         {/* <View></View> */}
         {/* For you */}
         <View>
-          <Text className="text-[20px] font-semibold text-gray-800">Dành cho bạn</Text>
+          <Text className="text-[20px] font-semibold text-gray-800">For you</Text>
           <View className="flex-row flex-wrap">
             <TouchableOpacity
               className="w-1/2 p-1"
@@ -35,7 +35,7 @@ const Home = ({ navigation }: Props) => {
               <MenuCard
                 bgColor="#EFC7FF"
                 numberOfFormula={32}
-                title="Công thức"
+                title="Formulas"
                 iconName="calculator"
               />
             </TouchableOpacity>
@@ -48,7 +48,7 @@ const Home = ({ navigation }: Props) => {
               <MenuCard
                 bgColor="#C7CCFF"
                 numberOfFormula={32}
-                title="Dụng cụ"
+                title="Tools"
                 iconName="build-outline"
               />
             </TouchableOpacity>
@@ -61,7 +61,7 @@ const Home = ({ navigation }: Props) => {
               <MenuCard
                 bgColor="#C7E6AF"
                 numberOfFormula={32}
-                title="Mẹo nhỏ"
+                title="Tips & Tricks"
                 iconName="information-circle-outline"
               />
             </TouchableOpacity>
@@ -69,14 +69,14 @@ const Home = ({ navigation }: Props) => {
               <MenuCard
                 bgColor="#B1E2ED"
                 numberOfFormula={32}
-                title="Ký hiệu"
+                title="Symbols"
                 iconName="flag-outline"
               />
             </TouchableOpacity>
           </View>
         </View>
         <View className="space-y-4">
-          <Text className="text-[20px] font-semibold text-gray-800">Mạng xã hội</Text>
+          <Text className="text-[20px] font-semibold text-gray-800">Social Media</Text>
           <TouchableOpacity onPress={navigateFanpage}>
             <View
               className="w-full rounded-2xl p-4 flex-row items-center justify-between"
@@ -85,11 +85,11 @@ const Home = ({ navigation }: Props) => {
               <View className="space-y-2">
                 <View className="flex-row items-center space-x-2">
                   <Ionicons name="logo-facebook" size={24} color="#2563EB" />
-                  <Text className="text-base font-semibold text-gray-800">Cộng đồng Đan Móc</Text>
+                  <Text className="text-base font-semibold text-gray-800">Crochet Community</Text>
                 </View>
                 <View className="max-w-[256px]">
                   <Text className="text-gray-800">
-                    Kết nối những người cùng đam mê, chia sẻ kinh nghiệm và sản phẩm.
+                    Connect with other crochet enthusiasts to share and learn.
                   </Text>
                 </View>
               </View>

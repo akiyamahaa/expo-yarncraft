@@ -5,7 +5,7 @@ import { RootStackParamList } from '@/navigation'
 import { formulaData } from '@/data/data'
 import YoutubePlayer from 'react-native-youtube-iframe'
 
-type Props = {} & NativeStackScreenProps<RootStackParamList, 'FormulaDetail'>
+type Props = NativeStackScreenProps<RootStackParamList, 'FormulaDetail'>
 
 const FormulaDetail = ({ route }: Props) => {
   const params = route.params
@@ -14,7 +14,7 @@ const FormulaDetail = ({ route }: Props) => {
 
   const [playing, setPlaying] = useState(false)
 
-  const onStateChange = useCallback((state) => {
+  const onStateChange = useCallback((state: any) => {
     if (state === 'ended') {
       setPlaying(false)
       Alert.alert('video has finished playing!')
@@ -26,17 +26,19 @@ const FormulaDetail = ({ route }: Props) => {
       <Image source={data.image} className="w-full h-52" resizeMode="cover" />
       <View className="p-5 space-y-8">
         <Text className="font-semibold text-3xl text-primary">{data.title}</Text>
+        {data.youtubeId && (
+          <View>
+            <Text className="text-primary text-xl mb-2">Reference Video</Text>
+            <YoutubePlayer
+              height={200}
+              play={playing}
+              videoId={data.youtubeId}
+              onChangeState={onStateChange}
+            />
+          </View>
+        )}
         <View>
-          <Text className="text-primary text-xl mb-2">Video hướng dẫn</Text>
-          <YoutubePlayer
-            height={200}
-            play={playing}
-            videoId={data.youtubeId}
-            onChangeState={onStateChange}
-          />
-        </View>
-        <View>
-          <Text className="text-primary text-xl">Các bước thực hiện</Text>
+          <Text className="text-primary text-xl">Steps</Text>
           <View className="space-y-2">
             {data.instructions.map((part, index) => (
               <View className="space-y-4" key={part.title}>
@@ -46,18 +48,20 @@ const FormulaDetail = ({ route }: Props) => {
                   </Text>
                   <View className="border p-2 rounded-lg">
                     <View className="flex-row justify-between border-b border-gray-300 py-2">
-                      <Text className="font-semibold">Round</Text>
-                      <Text className="font-semibold">Formula</Text>
-                      <Text className="font-semibold">Total sticks</Text>
+                      <Text className="font-semibold text-center">Round</Text>
+                      <Text className="font-semibold text-center">Formula</Text>
+                      <Text className="font-semibold text-center">Total stich</Text>
                     </View>
                     {part.content.map((step, index) => (
                       <View
                         className="flex-row justify-between py-2"
                         key={`${step.formula}-${index}`}
                       >
-                        <Text>{index + 1}</Text>
-                        <Text>{step.formula}</Text>
-                        <Text>{step.sticks}</Text>
+                        <Text className="text-center">{index + 1}</Text>
+                        <Text className="text-center" style={{ width: '80%' }}>
+                          {step.formula}
+                        </Text>
+                        <Text className="text-center">{step.stitch}</Text>
                       </View>
                     ))}
                     {/* Add more rows as needed */}
@@ -71,7 +75,7 @@ const FormulaDetail = ({ route }: Props) => {
                       resizeMode="cover"
                     />
                     <Text className="text-md font-medium text-primary">
-                      Ảnh minh họa phần {part.title}
+                      Reference Image of {part.title}
                     </Text>
                   </View>
                 )}
