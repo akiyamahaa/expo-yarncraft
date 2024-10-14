@@ -53,7 +53,7 @@ Here are some screenshots of YarnCraft in action:
 
 You can download the demo version of YarnCraft here:
 
-- [Download for Android]([link_to_android_demo](https://drive.google.com/file/d/1dmHxim5l6LxldPJCeII279NWcW7vkWsy/view?usp=drive_link))
+- [Download for Android](https://drive.google.com/file/d/1dmHxim5l6LxldPJCeII279NWcW7vkWsy/view?usp=drive_link)
 
 
 ## Getting Started
